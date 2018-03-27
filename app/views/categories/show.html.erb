@@ -2,6 +2,12 @@
 
 <ul>
 <% @category.items.each do |item| %>
-    <li><%= link_to item.title, item_path(item) %></li>
+
+    <%= link_to item.title, item_path(item) %>
+      <%#binding.pry%>
+    $<%= to_currency(item.price)%>
+    <%= form_tag "/line_items/#{item.id}" do %>
+        <%= submit_tag "Add to Cart" %>
+      <% end %>
 <% end %>
 </ul>

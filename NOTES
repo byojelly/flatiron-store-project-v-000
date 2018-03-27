@@ -1,0 +1,5 @@
+XXXX  rspec spec/features/store_home_feature_spec.rb  XXXX
+
+rspec spec/features/category_feature_spec.rb
+
+rspec spec/features/cart_feature_spec.rb
