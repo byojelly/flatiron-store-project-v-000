@@ -24,6 +24,7 @@ class Cart < ActiveRecord::Base
         subtract_inventory
         self.user.remove_cart
         self.update(status: "submitted")
+        self.user.carts << self
     #    binding.pry
     end
     def subtract_inventory

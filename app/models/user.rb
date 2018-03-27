@@ -12,9 +12,12 @@ class User < ActiveRecord::Base
 
 
   def create_current_cart
-     new_cart = Cart.create
+  #  binding.pry
+     new_cart = Cart.create(user_id: self.id)
      self.current_cart_id = new_cart.id
-     save
+     self.save
+    self.current_cart.user_id = self.id
+    self.save
    end
 
    def remove_cart

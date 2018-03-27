@@ -6,8 +6,6 @@
     <%= link_to item.title, item_path(item) %>
       <%#binding.pry%>
     $<%= to_currency(item.price)%>
-    <%= form_tag "/line_items/#{item.id}" do %>
-        <%= submit_tag "Add to Cart" %>
-      <% end %>
+      <%= button_to 'Add to Cart', line_items_path(item_id: item) %>
 <% end %>
 </ul>
