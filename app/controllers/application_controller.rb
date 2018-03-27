@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  #before_action :require_logged_in, except: [:index. :show, :new]]
+  before_action :require_logged_in
   #before_action :require_logged_in, except: [:show]]
   #before_action :require_logged_in, except: [:index. :show, :new]]
 
