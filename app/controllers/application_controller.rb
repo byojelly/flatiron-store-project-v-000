@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
   #before_action :require_logged_in, except: [:show]]
   #before_action :require_logged_in, except: [:index. :show, :new]]
 
-  before_action :require_logged_in, if: :devise_controller?
-  before_action :require_logged_in, except: [:index]
+  #before_action :require_logged_in, if: :devise_controller?
+  #before_action :require_logged_in, except: [:index]
 
   def logged_in?
     !!current_user
