@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+#below specifies devise to setup the routes for the users model, and that the specific controllers sessions, and registrations will receive an override
+#use the sessions controller inside the users direction of the controllers dirrectory
+
+#the routes for devise users, we want these specific controllers to look in these folders for specifc code (before_action items)
   devise_for :users, controllers: {
     sessions: 'users/sessions', registrations: 'users/registrations'
   }
