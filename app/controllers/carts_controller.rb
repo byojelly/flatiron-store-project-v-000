@@ -1,7 +1,9 @@
 class CartsController < ApplicationController
-    before_action :set_cart
+    before_action :set_cart#, except: [:index]
+  #def index
+  #  binding.pry
+  #end
   def show
-
 #binding.pry
   end
   def checkout

@@ -28,5 +28,6 @@ Rails.application.routes.draw do
   resources :orders, only: [:show]
 
   post 'carts/:id/checkout', to: 'carts#checkout', as: 'checkout'
+  #get 'users/:id/carts', to: "carts#index", as: "user_cart_index"
 
 end
